@@ -518,7 +518,9 @@ button {
     width: calc(100% - 56px);
     align-items: center;
     flex-direction: row;
+    height: 58px;
     min-height: 58px;
+    overflow: hidden;
     border-radius: 999px;
     gap: 12px;
     padding: 9px 10px 9px 14px;
@@ -591,56 +593,62 @@ button {
   .gallery-header {
     top: 12px;
     width: calc(100% - 24px);
-    min-height: 52px;
-    padding: 8px;
-    gap: 8px;
+    height: 48px;
+    min-height: 48px;
+    padding: 6px 7px;
+    gap: 6px;
+    overflow: hidden;
   }
 
   .gallery-nav {
     align-items: center;
     flex-direction: row;
-    gap: 8px;
+    flex: 1 1 auto;
+    gap: 6px;
     min-width: 0;
+    overflow: hidden;
   }
 
   .nav-trail {
     flex-wrap: nowrap;
     overflow: hidden;
     min-width: 0;
-    white-space: normal;
-    gap: 6px;
-    font-size: clamp(0.58rem, 2.5vw, 0.72rem);
+    white-space: nowrap;
+    gap: 5px;
+    font-size: clamp(0.52rem, 2.25vw, 0.66rem);
   }
 
   .nav-trail span {
-    gap: 6px;
+    gap: 5px;
+    flex: 0 0 auto;
   }
 
-  .nav-trail span:nth-child(n + 3) {
+  .nav-trail span:nth-child(n + 2) {
     display: none;
   }
 
   .brand-mark {
-    max-width: 82px;
+    flex: 0 1 auto;
+    max-width: 72px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: clamp(0.72rem, 3vw, 0.84rem);
+    font-size: clamp(0.62rem, 2.65vw, 0.76rem);
   }
 
   .tab-button {
     flex: 0 0 auto;
     justify-content: center;
-    min-height: 32px;
-    gap: 5px;
-    padding: 6px 8px;
-    font-size: clamp(0.64rem, 2.7vw, 0.76rem);
+    min-height: 28px;
+    gap: 4px;
+    padding: 5px 7px;
+    font-size: clamp(0.56rem, 2.35vw, 0.68rem);
   }
 
   .tab-count {
     min-width: 20px;
-    height: 20px;
-    padding: 0 6px;
-    font-size: 0.64rem;
+    height: 18px;
+    padding: 0 5px;
+    font-size: 0.58rem;
   }
 
   .gallery-panel.active,
@@ -648,7 +656,7 @@ button {
     grid-template-columns: 1fr;
     grid-auto-rows: 240px;
     row-gap: 42px;
-    margin-top: 126px;
+    margin-top: 104px;
   }
 
   .gallery-card:nth-child(n) {
@@ -667,5 +675,41 @@ button {
     top: auto;
     bottom: 24px;
     transform: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-header {
+    width: calc(100% - 18px);
+    height: 44px;
+    min-height: 44px;
+    padding: 5px 6px;
+  }
+
+  .brand-mark {
+    max-width: 58px;
+    font-size: 0.6rem;
+  }
+
+  .nav-trail {
+    display: none;
+  }
+
+  .tab-button {
+    min-height: 26px;
+    padding: 4px 6px;
+    font-size: 0.55rem;
+  }
+
+  .tab-count {
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    font-size: 0.52rem;
+  }
+
+  .gallery-panel.active,
+  .certificate-panel.active {
+    margin-top: 92px;
   }
 }

@@ -36,7 +36,7 @@ button {
 .gallery-shell {
   width: min(1400px, 100%);
   margin-inline: auto;
-  padding: 122px clamp(48px, 5vw, 64px) 110px;
+  padding: 150px clamp(48px, 5vw, 64px) 110px;
 }
 
 .gallery-header {
@@ -127,7 +127,7 @@ button {
   position: static;
   display: flex;
   width: fit-content;
-  margin: 0 0 32px auto;
+  margin: 0 0 48px auto;
   gap: 4px;
   padding: 5px;
   border: 1px solid var(--border);

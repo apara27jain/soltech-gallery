@@ -511,6 +511,7 @@ button {
 @media (max-width: 900px) {
   .gallery-shell {
     padding-inline: 28px;
+    padding-top: 96px;
   }
 
   .gallery-header {
@@ -533,10 +534,13 @@ button {
   }
 
   .gallery-tabs {
-    top: 29px;
-    right: 42px;
-    flex: 0 0 auto;
-    width: auto;
+    position: static;
+    top: auto;
+    right: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 0 20px;
   }
 
   .gallery-panel.active,
@@ -547,7 +551,7 @@ button {
     column-gap: 38px;
     row-gap: 54px;
     min-height: auto;
-    margin-top: 154px;
+    margin-top: 0;
   }
 
   .gallery-card,
@@ -578,18 +582,18 @@ button {
 @media (max-width: 640px) {
   .gallery-shell {
     width: min(100% - 24px, 1180px);
-    padding: 38px 0 80px;
+    padding: 80px 0 80px;
     margin-inline: auto;
   }
 
   .gallery-tabs {
-    position: relative;
-    top: 0;
+    position: static;
+    top: auto;
     right: auto;
-    width: auto;
+    width: 100%;
     display: flex;
-    width: max-content;
-    margin: 88px 0 24px auto;
+    justify-content: flex-end;
+    margin: 0 0 20px;
     gap: 2px;
     padding: 4px;
   }

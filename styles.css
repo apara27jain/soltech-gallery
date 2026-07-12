@@ -36,7 +36,7 @@ button {
 .gallery-shell {
   width: min(1400px, 100%);
   margin-inline: auto;
-  padding: 24px clamp(48px, 5vw, 64px) 110px;
+  padding: 122px clamp(48px, 5vw, 64px) 110px;
 }
 
 .gallery-header {
@@ -124,13 +124,11 @@ button {
 }
 
 .gallery-tabs {
-  position: fixed;
-  top: 36px;
-  right: max(clamp(48px, 5vw, 64px), calc((100vw - 1400px) / 2 + 64px));
-  z-index: 1001;
-  display: inline-flex;
+  position: static;
+  display: flex;
+  width: fit-content;
+  margin: 0 0 32px auto;
   gap: 4px;
-  margin-top: 0;
   padding: 5px;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -198,7 +196,7 @@ button {
   column-gap: 64px;
   row-gap: 76px;
   min-height: auto;
-  margin-top: 180px;
+  margin-top: 0;
   perspective: 1200px;
   transform:
     translate3d(var(--scene-x, 0px), var(--scene-y, 0px), 0)

@@ -127,7 +127,7 @@ button {
   position: static;
   display: flex;
   width: fit-content;
-  margin: 5 5 48px auto;
+  margin: 0 0 48px auto;
   gap: 4px;
   padding: 5px;
   border: 1px solid var(--border);
@@ -142,7 +142,6 @@ button {
 .tab-button {
   display: inline-flex;
   align-items: center;
-  padding: 5px;
   gap: 10px;
   border: 0;
   border-radius: 999px;

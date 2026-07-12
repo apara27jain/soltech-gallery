@@ -124,10 +124,10 @@ button {
 }
 
 .gallery-tabs {
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 30;
+  position: fixed;
+  top: 36px;
+  right: max(clamp(48px, 5vw, 64px), calc((100vw - 1400px) / 2 + 64px));
+  z-index: 1001;
   display: inline-flex;
   gap: 4px;
   margin-top: 0;
@@ -533,6 +533,8 @@ button {
   }
 
   .gallery-tabs {
+    top: 29px;
+    right: 42px;
     flex: 0 0 auto;
     width: auto;
   }
@@ -585,7 +587,9 @@ button {
     top: 0;
     right: auto;
     width: auto;
-    margin-top: 0;
+    display: flex;
+    width: max-content;
+    margin: 88px 0 24px auto;
     gap: 2px;
     padding: 4px;
   }
@@ -624,7 +628,7 @@ button {
   }
 
   .nav-trail span:nth-child(n + 2) {
-    display: none;
+    display: inline-flex;
   }
 
   .brand-mark {
@@ -656,7 +660,7 @@ button {
     grid-template-columns: 1fr;
     grid-auto-rows: 240px;
     row-gap: 42px;
-    margin-top: 104px;
+    margin-top: 0;
   }
 
   .gallery-card:nth-child(n) {
@@ -692,6 +696,11 @@ button {
   }
 
   .nav-trail {
+    display: flex;
+    font-size: 0.52rem;
+  }
+
+  .nav-trail span:nth-child(n + 3) {
     display: none;
   }
 
@@ -710,6 +719,6 @@ button {
 
   .gallery-panel.active,
   .certificate-panel.active {
-    margin-top: 92px;
+    margin-top: 0;
   }
 }

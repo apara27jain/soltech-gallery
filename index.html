@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soltech Energy Gallery Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="gallery-shell">
+      <header class="gallery-header">
+        <nav class="gallery-nav" aria-label="Gallery navigation">
+          <a class="brand-mark" href="#">Soltech Energy</a>
+          <div class="nav-trail">
+            <span>Portfolio</span>
+            <span>Gallery</span>
+            <span>Projects</span>
+            <span>Certificates</span>
+          </div>
+        </nav>
+
+        <div class="gallery-tabs" role="tablist" aria-label="Gallery type">
+          <button class="tab-button active" type="button" data-gallery="projects">
+            Projects
+            <span class="tab-count">12</span>
+          </button>
+          <button class="tab-button" type="button" data-gallery="certificates">
+            Certificates
+            <span class="tab-count">6</span>
+          </button>
+        </div>
+      </header>
+
+      <section
+        class="gallery-panel active floating-gallery"
+        id="projects-gallery"
+        aria-label="Solar project gallery"
+      >
+        <article class="gallery-card featured has-image">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+            alt="Solar panels installed in rows under sunlight"
+          />
+        </article>
+        <article class="gallery-card tall has-image">
+          <img
+            src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=900&q=80"
+            alt="Technician working near solar panels"
+          />
+        </article>
+        <article class="gallery-card has-image">
+          <img
+            src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=900&q=80"
+            alt="Solar panels on a residential roof"
+          />
+        </article>
+        <article class="gallery-card wide has-image">
+          <img
+            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80"
+            alt="Large solar farm with blue sky"
+          />
+        </article>
+        <article class="gallery-card placeholder">
+          <div class="placeholder-icon">☀</div>
+          <p>Project image coming soon</p>
+        </article>
+        <article class="gallery-card has-image">
+          <img
+            src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=900&q=80"
+            alt="Close-up view of modern solar panels"
+          />
+        </article>
+        <article class="gallery-card tall placeholder">
+          <div class="placeholder-icon">+</div>
+          <p>Add solar project image</p>
+        </article>
+        <article class="gallery-card has-image">
+          <img
+            src="https://images.unsplash.com/photo-1625301840055-7c1b7198cfc1?auto=format&fit=crop&w=900&q=80"
+            alt="Solar panel installation on rooftop"
+          />
+        </article>
+        <article class="gallery-card wide placeholder">
+          <div class="placeholder-icon">↗</div>
+          <p>More installation photos</p>
+        </article>
+        <article class="gallery-card has-image">
+          <img
+            src="https://images.unsplash.com/photo-1584276433295-4b49a252e5ee?auto=format&fit=crop&w=900&q=80"
+            alt="Solar panel system detail"
+          />
+        </article>
+      </section>
+
+      <section
+        class="gallery-panel certificate-panel floating-gallery"
+        id="certificates-gallery"
+        aria-label="Company certificate gallery"
+      >
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">SE</span>
+            <p>Certificate coming soon</p>
+          </div>
+        </article>
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">ISO</span>
+            <p>ISO / quality certificate</p>
+          </div>
+        </article>
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">MNRE</span>
+            <p>Government / solar registration</p>
+          </div>
+        </article>
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">★</span>
+            <p>Award or authorization</p>
+          </div>
+        </article>
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">✓</span>
+            <p>License document</p>
+          </div>
+        </article>
+        <article class="certificate-card placeholder">
+          <div class="certificate-frame">
+            <span class="seal">+</span>
+            <p>Add certificate image</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close preview">
+        ×
+      </button>
+      <button class="lightbox-arrow prev" type="button" aria-label="Previous image">
+        ‹
+      </button>
+      <img class="lightbox-image" src="" alt="" />
+      <button class="lightbox-arrow next" type="button" aria-label="Next image">
+        ›
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

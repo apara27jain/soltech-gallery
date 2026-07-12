@@ -541,6 +541,23 @@ button {
     justify-content: flex-end;
     width: 100%;
     margin: 0 0 20px;
+    gap: 8px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .tab-button {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+  }
+
+  .tab-button.active,
+  .tab-button:hover {
+    border-color: transparent;
   }
 
   .gallery-panel.active,
@@ -594,8 +611,12 @@ button {
     display: flex;
     justify-content: flex-end;
     margin: 0 0 20px;
-    gap: 2px;
-    padding: 4px;
+    gap: 6px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .gallery-header {
@@ -603,7 +624,7 @@ button {
     width: calc(100% - 24px);
     height: 48px;
     min-height: 48px;
-    padding: 6px 7px;
+    padding: 6px 10px;
     gap: 6px;
     overflow: hidden;
   }
@@ -612,7 +633,7 @@ button {
     align-items: center;
     flex-direction: row;
     flex: 1 1 auto;
-    gap: 6px;
+    gap: 8px;
     min-width: 0;
     overflow: hidden;
   }
@@ -622,12 +643,12 @@ button {
     overflow: hidden;
     min-width: 0;
     white-space: nowrap;
-    gap: 5px;
-    font-size: clamp(0.52rem, 2.25vw, 0.66rem);
+    gap: 4px;
+    font-size: clamp(0.46rem, 1.9vw, 0.58rem);
   }
 
   .nav-trail span {
-    gap: 5px;
+    gap: 4px;
     flex: 0 0 auto;
   }
 
@@ -636,11 +657,12 @@ button {
   }
 
   .brand-mark {
-    flex: 0 1 auto;
-    max-width: 72px;
+    flex: 0 0 auto;
+    max-width: 108px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: clamp(0.62rem, 2.65vw, 0.76rem);
+    white-space: nowrap;
+    font-size: clamp(0.64rem, 2.6vw, 0.76rem);
   }
 
   .tab-button {
@@ -648,8 +670,16 @@ button {
     justify-content: center;
     min-height: 28px;
     gap: 4px;
-    padding: 5px 7px;
+    padding: 5px 9px;
     font-size: clamp(0.56rem, 2.35vw, 0.68rem);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+  }
+
+  .tab-button.active,
+  .tab-button:hover {
+    border-color: transparent;
   }
 
   .tab-count {

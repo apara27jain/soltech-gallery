@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soltech Energy Gallery Prototype</title>
+    <title>Soltech Energy — Project Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,136 +20,121 @@
             <span>Portfolio</span>
             <span>Gallery</span>
             <span>Projects</span>
-            <span>Certificates</span>
           </div>
         </nav>
       </header>
-      <div class="gallery-tabs" role="tablist" aria-label="Gallery type">
-        <button class="tab-button active" type="button" data-gallery="projects">
-          Projects
-          <span class="tab-count">12</span>
-        </button>
-        <button class="tab-button" type="button" data-gallery="certificates">
-          Certificates
-          <span class="tab-count">6</span>
-        </button>
-      </div>
+
+      <!-- ── PROJECT GALLERY ───────────────────────────────────────── -->
       <section
         class="gallery-panel active floating-gallery"
         id="projects-gallery"
         aria-label="Solar project gallery"
       >
-        <article class="gallery-card featured has-image">
-          <img
-            src="1..jpeg"
-            alt="Rooftop solar panel installation with city skyline"
-          />
+        <!-- Westin Pushkar — featured (wide hero card) -->
+        <article class="gallery-card featured project-card has-image" data-project="westin-pushkar-300kw">
+          <img src="images/westin-pushkar-300kw/photo-1.jpg" alt="The Westin Pushkar — 300 kW" />
+          <div class="card-info">
+            <span class="card-name">The Westin Pushkar</span>
+            <span class="card-meta">300 kW · Pushkar</span>
+          </div>
         </article>
-        <article class="gallery-card tall has-image">
-          <img
-            src="2..jpeg"
-            alt="Solar panels installed above residential terrace"
-          />
-        </article>
-        <article class="gallery-card has-image">
-          <img
-            src="3..jpeg"
-            alt="Terrace solar installation viewed from below"
-          />
-        </article>
-        <article class="gallery-card wide has-image">
-          <img
-            src="4..jpeg"
-            alt="Solar structure on rooftop under clear blue sky"
-          />
-        </article>
-        <article class="gallery-card placeholder">
-          <div class="placeholder-icon">☀</div>
-          <p>Project image coming soon</p>
-        </article>
-        <article class="gallery-card has-image">
-          <img
-            src="5..jpeg"
-            alt="Residential rooftop solar panel structure"
-          />
-        </article>
-        <article class="gallery-card tall placeholder">
-          <div class="placeholder-icon">+</div>
-          <p>Add solar project image</p>
-        </article>
-        <article class="gallery-card has-image">
-          <img
-            src="6..jpeg"
-            alt="Large rooftop solar panel installation with city view"
-          />
-        </article>
-        <article class="gallery-card wide placeholder">
-          <div class="placeholder-icon">↗</div>
-          <p>More installation photos</p>
-        </article>
-        <article class="gallery-card has-image">
-          <img
-            src="https://images.unsplash.com/photo-1584276433295-4b49a252e5ee?auto=format&fit=crop&w=900&q=80"
-            alt="Solar panel system detail"
-          />
-        </article>
-      </section>
 
-      <section
-        class="gallery-panel certificate-panel floating-gallery"
-        id="certificates-gallery"
-        aria-label="Company certificate gallery"
-      >
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">SE</span>
-            <p>Certificate coming soon</p>
+        <!-- Vrindavan Dham — tall -->
+        <article class="gallery-card tall project-card has-image" data-project="vrindavan-dham-khatu-shyam-250kw">
+          <img src="images/vrindavan-dham-khatu-shyam-250kw/photo-1.jpg" alt="Vrindavan Dham Dharamshala — 250 kW" />
+          <div class="card-info">
+            <span class="card-name">Vrindavan Dham Dharamshala</span>
+            <span class="card-meta">250 kW · Khatu Shyam Ji</span>
           </div>
         </article>
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">ISO</span>
-            <p>ISO / quality certificate</p>
+
+        <!-- Magnatix Rocks -->
+        <article class="gallery-card project-card has-image" data-project="magnatix-rocks-dudu-400kw">
+          <img src="images/magnatix-rocks-dudu-400kw/photo-1.jpg" alt="Magnatix Rocks — 400 kW" />
+          <div class="card-info">
+            <span class="card-name">Magnatix Rocks</span>
+            <span class="card-meta">400 kW · Dudu</span>
           </div>
         </article>
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">MNRE</span>
-            <p>Government / solar registration</p>
+
+        <!-- SBE International Stones — wide -->
+        <article class="gallery-card wide project-card has-image" data-project="sbe-international-stones-dudu-400kw">
+          <img src="images/sbe-international-stones-dudu-400kw/photo-1.jpg" alt="SBE International Stones — 400 kW" />
+          <div class="card-info">
+            <span class="card-name">SBE International Stones</span>
+            <span class="card-meta">400 kW · Dudu</span>
           </div>
         </article>
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">★</span>
-            <p>Award or authorization</p>
+
+        <!-- Ashoka Marble -->
+        <article class="gallery-card project-card has-image" data-project="ashoka-marble-vki-180kw">
+          <img src="images/ashoka-marble-vki-180kw/photo-1.jpg" alt="Ashoka Marble VKI — 180 kW" />
+          <div class="card-info">
+            <span class="card-name">Ashoka Marble VKI</span>
+            <span class="card-meta">180 kW · VKI, Jaipur</span>
           </div>
         </article>
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">✓</span>
-            <p>License document</p>
+
+        <!-- Shreeyansh Healthcare — tall -->
+        <article class="gallery-card tall project-card has-image" data-project="shreeyansh-healthcare-kishangarh-130kw">
+          <img src="images/shreeyansh-healthcare-kishangarh-130kw/photo-1.jpg" alt="Shreeyansh Healthcare — 130 kW" />
+          <div class="card-info">
+            <span class="card-name">Shreeyansh Healthcare</span>
+            <span class="card-meta">130 kW · Kishangarh</span>
           </div>
         </article>
-        <article class="certificate-card placeholder">
-          <div class="certificate-frame">
-            <span class="seal">+</span>
-            <p>Add certificate image</p>
+
+        <!-- Shakun Marbles -->
+        <article class="gallery-card project-card has-image" data-project="shakun-marble-vki-234kw">
+          <img src="images/shakun-marble-vki-234kw/photo-1.jpg" alt="Shakun Marbles VKI — 234 kW" />
+          <div class="card-info">
+            <span class="card-name">Shakun Marbles VKI</span>
+            <span class="card-meta">234 kW · VKI, Jaipur</span>
+          </div>
+        </article>
+
+        <!-- Tileco Land Developers — wide -->
+        <article class="gallery-card wide project-card has-image" data-project="tileco-land-developers-vki-100kw">
+          <img src="images/tileco-land-developers-vki-100kw/photo-1.jpg" alt="Tileco Land Developers — 100 kW" />
+          <div class="card-info">
+            <span class="card-name">Tileco Land Developers</span>
+            <span class="card-meta">100 kW · VKI, Jaipur</span>
+          </div>
+        </article>
+
+        <!-- Radhika Industries -->
+        <article class="gallery-card project-card has-image" data-project="radhika-industries-40kw">
+          <img src="images/radhika-industries-40kw/photo-1.jpg" alt="Radhika Industries — 40 kW" />
+          <div class="card-info">
+            <span class="card-name">Radhika Industries</span>
+            <span class="card-meta">40 kW · Jaipur</span>
+          </div>
+        </article>
+
+        <!-- Vidhyadhar Nagar -->
+        <article class="gallery-card project-card has-image" data-project="vidhyadhar-nagar-jaipur-10kw">
+          <img src="images/vidhyadhar-nagar-jaipur-10kw/photo-1.jpg" alt="Vidhyadhar Nagar Residence — 10 kW" />
+          <div class="card-info">
+            <span class="card-name">Vidhyadhar Nagar</span>
+            <span class="card-meta">10 kW · Jaipur</span>
           </div>
         </article>
       </section>
     </main>
 
+    <!-- ── LIGHTBOX ───────────────────────────────────────────────── -->
     <div class="lightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="Close preview">
-        ×
-      </button>
-      <button class="lightbox-arrow prev" type="button" aria-label="Previous image">
-        ‹
-      </button>
-      <img class="lightbox-image" src="" alt="" />
-      <button class="lightbox-arrow next" type="button" aria-label="Next image">
-        ›
-      </button>
+      <button class="lightbox-close" type="button" aria-label="Close preview">×</button>
+      <button class="lightbox-arrow prev" type="button" aria-label="Previous image">‹</button>
+      <div class="lightbox-inner">
+        <img class="lightbox-image" src="" alt="" />
+        <div class="lightbox-caption">
+          <span class="lightbox-name"></span>
+          <span class="lightbox-meta"></span>
+          <span class="lightbox-counter"></span>
+        </div>
+      </div>
+      <button class="lightbox-arrow next" type="button" aria-label="Next image">›</button>
     </div>
 
     <script src="./script.js"></script>

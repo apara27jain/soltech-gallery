@@ -5,52 +5,52 @@ const PROJECT_GALLERIES = {
   "westin-pushkar-300kw": {
     name: "The Westin Pushkar",
     meta: "300 kW · Pushkar, Rajasthan",
-    photos: Array.from({ length: 35 }, (_, i) => `images/westin-pushkar-300kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 35 }, (_, i) => `westin-pushkar-300kw/photo-${i + 1}.jpg`),
   },
   "vrindavan-dham-khatu-shyam-250kw": {
     name: "Vrindavan Dham Dharamshala",
     meta: "250 kW · Khatu Shyam Ji, Rajasthan",
-    photos: Array.from({ length: 20 }, (_, i) => `images/vrindavan-dham-khatu-shyam-250kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 20 }, (_, i) => `vrindavan-dham-khatu-shyam-250kw/photo-${i + 1}.jpg`),
   },
   "magnatix-rocks-dudu-400kw": {
     name: "Magnatix Rocks",
     meta: "400 kW · Dudu, Rajasthan",
-    photos: Array.from({ length: 14 }, (_, i) => `images/magnatix-rocks-dudu-400kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 14 }, (_, i) => `magnatix-rocks-dudu-400kw/photo-${i + 1}.jpg`),
   },
   "sbe-international-stones-dudu-400kw": {
     name: "SBE International Stones",
     meta: "400 kW · Dudu, Rajasthan",
-    photos: Array.from({ length: 9 }, (_, i) => `images/sbe-international-stones-dudu-400kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 9 }, (_, i) => `sbe-international-stones-dudu-400kw/photo-${i + 1}.jpg`),
   },
   "ashoka-marble-vki-180kw": {
     name: "Ashoka Marble VKI",
     meta: "180 kW · VKI Industrial Area, Jaipur",
-    photos: Array.from({ length: 6 }, (_, i) => `images/ashoka-marble-vki-180kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 6 }, (_, i) => `ashoka-marble-vki-180kw/photo-${i + 1}.jpg`),
   },
   "shreeyansh-healthcare-kishangarh-130kw": {
     name: "Shreeyansh Healthcare",
     meta: "130 kW · Kishangarh, Rajasthan",
-    photos: Array.from({ length: 12 }, (_, i) => `images/shreeyansh-healthcare-kishangarh-130kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 12 }, (_, i) => `shreeyansh-healthcare-kishangarh-130kw/photo-${i + 1}.jpg`),
   },
   "shakun-marble-vki-234kw": {
     name: "Shakun Marbles VKI",
     meta: "234 kW · VKI Industrial Area, Jaipur",
-    photos: Array.from({ length: 1 }, (_, i) => `images/shakun-marble-vki-234kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 1 }, (_, i) => `shakun-marble-vki-234kw/photo-${i + 1}.jpg`),
   },
   "tileco-land-developers-vki-100kw": {
     name: "Tileco Land Developers",
     meta: "100 kW · VKI Industrial Area, Jaipur",
-    photos: Array.from({ length: 7 }, (_, i) => `images/tileco-land-developers-vki-100kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 7 }, (_, i) => `tileco-land-developers-vki-100kw/photo-${i + 1}.jpg`),
   },
   "radhika-industries-40kw": {
     name: "Radhika Industries",
     meta: "40 kW · Jaipur, Rajasthan",
-    photos: Array.from({ length: 2 }, (_, i) => `images/radhika-industries-40kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 2 }, (_, i) => `radhika-industries-40kw/photo-${i + 1}.jpg`),
   },
   "vidhyadhar-nagar-jaipur-10kw": {
     name: "Vidhyadhar Nagar Residence",
     meta: "10 kW · Jaipur, Rajasthan",
-    photos: Array.from({ length: 4 }, (_, i) => `images/vidhyadhar-nagar-jaipur-10kw/photo-${i + 1}.jpg`),
+    photos: Array.from({ length: 4 }, (_, i) => `vidhyadhar-nagar-jaipur-10kw/photo-${i + 1}.jpg`),
   },
 };
 

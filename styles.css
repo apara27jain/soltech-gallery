@@ -107,11 +107,16 @@ button {
     letter-spacing:1px;
 }
 
-.nav-title p{
-    margin-top:3px;
+.nav-title h1{
+    font-size:26px;
+    font-weight:800;
+    color:white;
+    margin:0;
+}
+
+.nav-title span{
+    font-size:13px;
     color:#D8B24C;
-    font-size:14px;
-    font-weight:500;
 }
 
 .nav-right{

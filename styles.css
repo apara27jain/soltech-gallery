@@ -83,38 +83,43 @@ button {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 34px;
+    width: 100%;
+    min-height: 100px;
+    padding:16px 32px;
     border-radius:22px;
 }
 
 .nav-left{
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:20px;
 }
 
 .nav-logo{
-    width:68px;
-    height:68px;
-    object-fit:contain;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.nav-title h1{
+.nav-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-title h1{ 
+    font-family: "Manrope", sans-serif;
     margin:0;
     color:white;
-    font-size:24px;
+    font-size:26px;
     font-weight:800;
     letter-spacing:1px;
 }
 
-.nav-title h1{
-    font-size:26px;
-    font-weight:800;
-    color:white;
-    margin:0;
-}
-
 .nav-title span{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    margin-top: 6px;
     font-size:13px;
     color:#D8B24C;
 }
@@ -124,6 +129,14 @@ button {
     align-items:center;
     justify-content:flex-end;
     flex:1;
+}
+
+.nav-right span{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    white-space: nowrap;
+    font-size:14px;
+    font-weight:600;
+    color:#d7d7d7;
 }
 
 .nav-stat{

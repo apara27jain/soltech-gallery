@@ -44,8 +44,8 @@ button { font: inherit; }
 }
 
 .site-logo {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -156,6 +156,7 @@ button { font: inherit; }
   border-radius: 24px;
   background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04));
   box-shadow: var(--shadow);
+  padding-top: 120px; 
   isolation: isolate;
   cursor: pointer;
   transform:

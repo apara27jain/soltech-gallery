@@ -6,124 +6,161 @@
     <title>Soltech Energy — Project Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+
     <main class="gallery-shell">
-      <header class="gallery-header">
-        <nav class="gallery-nav">
-          <div class="nav-left">
-            <img src="logo.jpg" class="nav-logo" alt="Soltech Logo">
-            <div class="nav-title">
-              <h1> Soltech Energy </h1>
-              <span> Portfolio </span>
-            </div>
-          </div>
-          <div class="nav-right">
-            <span>150+ Projects • 50+ MW Installed </span>
-          </div>
-        </nav>
-      </header>
+
+      <!-- ── TOP BAR ───────────────────────────────────────────────── -->
+      <div class="top-bar">
+        <img src="images/soltech-logo.png" class="site-logo" alt="Soltech Energy" />
+        <span class="stat-badge">⚡ 5 MW+ Installed</span>
+      </div>
+
+      <!-- ── KW FILTER BUTTONS ─────────────────────────────────────── -->
+      <div class="filter-bar" role="group" aria-label="Filter by capacity">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="300+">300 kW+</button>
+        <button class="filter-btn" data-filter="100-300">100 – 300 kW</button>
+        <button class="filter-btn" data-filter="under100">Under 100 kW</button>
+      </div>
 
       <!-- ── PROJECT GALLERY ───────────────────────────────────────── -->
-      <section
-        class="gallery-panel active floating-gallery"
-        id="projects-gallery"
-        aria-label="Solar project gallery"
-      >
-        <!-- Westin Pushkar — featured (wide hero card) -->
-        <article class="gallery-card featured project-card has-image" data-project="westin-pushkar-300kw">
-          <img src="westin-pushkar-300kw/photo-1.jpg" alt="The Westin Pushkar — 300 kW" />
-          <div class="card-info">
-            <span class="card-name">The Westin Pushkar</span>
-            <span class="card-meta">300 kW · Pushkar</span>
-          </div>
+      <!-- sorted highest kW first; data-kw used for filtering -->
+      <section class="gallery-panel active floating-gallery" id="projects-gallery" aria-label="Solar project gallery">
+
+        <!-- 5 MW — Domestic/Small Projects -->
+        <article class="gallery-card wide placeholder" data-project="domestic-small" data-kw="5000">
+          <div class="placeholder-icon">⚡</div>
+          <p class="card-name">Domestic &amp; Small Projects</p>
+          <p class="card-meta">5 MW+ · On Grid</p>
         </article>
 
-        <!-- Vrindavan Dham — tall -->
-        <article class="gallery-card tall project-card has-image" data-project="vrindavan-dham-khatu-shyam-250kw">
-          <img src="vrindavan-dham-khatu-shyam-250kw/photo-1.jpg" alt="Vrindavan Dham Dharamshala — 250 kW" />
-          <div class="card-info">
-            <span class="card-name">Vrindavan Dham Dharamshala</span>
-            <span class="card-meta">250 kW · Khatu Shyam Ji</span>
-          </div>
+        <!-- 400 kW — SBE International Stones -->
+        <article class="gallery-card featured project-card has-image" data-project="sbe-international-stones-dudu-400kw" data-kw="400">
+          <img src="images/sbe-international-stones-dudu-400kw/photo-1.jpg" alt="SBE International Stones — 400 kW" />
+          <div class="card-info"><span class="card-name">SBE International Stones</span><span class="card-meta">400 kW · Dudu</span></div>
         </article>
 
-        <!-- Magnatix Rocks -->
-        <article class="gallery-card project-card has-image" data-project="magnatix-rocks-dudu-400kw">
-          <img src="magnatix-rocks-dudu-400kw/photo-1.jpg" alt="Magnatix Rocks — 400 kW" />
-          <div class="card-info">
-            <span class="card-name">Magnatix Rocks</span>
-            <span class="card-meta">400 kW · Dudu</span>
-          </div>
+        <!-- 400 kW — Magnatix Rocks -->
+        <article class="gallery-card tall project-card has-image" data-project="magnatix-rocks-dudu-400kw" data-kw="400">
+          <img src="images/magnatix-rocks-dudu-400kw/photo-1.jpg" alt="Magnatix Rocks — 400 kW" />
+          <div class="card-info"><span class="card-name">Magnatix Rocks</span><span class="card-meta">400 kW · Dudu</span></div>
         </article>
 
-        <!-- SBE International Stones — wide -->
-        <article class="gallery-card wide project-card has-image" data-project="sbe-international-stones-dudu-400kw">
-          <img src="sbe-international-stones-dudu-400kw/photo-1.jpg" alt="SBE International Stones — 400 kW" />
-          <div class="card-info">
-            <span class="card-name">SBE International Stones</span>
-            <span class="card-meta">400 kW · Dudu</span>
-          </div>
+        <!-- 300 kW — Westin Pushkar -->
+        <article class="gallery-card project-card has-image" data-project="westin-pushkar-300kw" data-kw="300">
+          <img src="images/westin-pushkar-300kw/photo-1.jpg" alt="The Westin Pushkar — 300 kW" />
+          <div class="card-info"><span class="card-name">The Westin Pushkar</span><span class="card-meta">300 kW · Pushkar</span></div>
         </article>
 
-        <!-- Ashoka Marble -->
-        <article class="gallery-card project-card has-image" data-project="ashoka-marble-vki-180kw">
-          <img src="ashoka-marble-vki-180kw/photo-1.jpg" alt="Ashoka Marble VKI — 180 kW" />
-          <div class="card-info">
-            <span class="card-name">Ashoka Marble VKI</span>
-            <span class="card-meta">180 kW · VKI, Jaipur</span>
-          </div>
+        <!-- 250 kW — Vrindavan Dham -->
+        <article class="gallery-card wide project-card has-image" data-project="vrindavan-dham-khatu-shyam-250kw" data-kw="250">
+          <img src="images/vrindavan-dham-khatu-shyam-250kw/photo-1.jpg" alt="Vrindavan Dham — 250 kW" />
+          <div class="card-info"><span class="card-name">Vrindavan Dham Dharamshala</span><span class="card-meta">250 kW · Khatu Shyam Ji</span></div>
         </article>
 
-        <!-- Shreeyansh Healthcare — tall -->
-        <article class="gallery-card tall project-card has-image" data-project="shreeyansh-healthcare-kishangarh-130kw">
-          <img src="shreeyansh-healthcare-kishangarh-130kw/photo-1.jpg" alt="Shreeyansh Healthcare — 130 kW" />
-          <div class="card-info">
-            <span class="card-name">Shreeyansh Healthcare</span>
-            <span class="card-meta">130 kW · Kishangarh</span>
-          </div>
+        <!-- 234 kW — Shakun Marbles -->
+        <article class="gallery-card project-card has-image" data-project="shakun-marble-vki-234kw" data-kw="234">
+          <img src="images/shakun-marble-vki-234kw/photo-1.jpg" alt="Shakun Marbles — 234 kW" />
+          <div class="card-info"><span class="card-name">Shakun Marbles VKI</span><span class="card-meta">234 kW · VKI, Jaipur</span></div>
         </article>
 
-        <!-- Shakun Marbles -->
-        <article class="gallery-card project-card has-image" data-project="shakun-marble-vki-234kw">
-          <img src="shakun-marble-vki-234kw/photo-1.jpg" alt="Shakun Marbles VKI — 234 kW" />
-          <div class="card-info">
-            <span class="card-name">Shakun Marbles VKI</span>
-            <span class="card-meta">234 kW · VKI, Jaipur</span>
-          </div>
+        <!-- 220 kW — Maheshwari Public School -->
+        <article class="gallery-card tall placeholder" data-project="maheshwari-public-school" data-kw="220">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Maheshwari Public School</p>
+          <p class="card-meta">220 kW · On Grid</p>
         </article>
 
-        <!-- Tileco Land Developers — wide -->
-        <article class="gallery-card wide project-card has-image" data-project="tileco-land-developers-vki-100kw">
-          <img src="tileco-land-developers-vki-100kw/photo-1.jpg" alt="Tileco Land Developers — 100 kW" />
-          <div class="card-info">
-            <span class="card-name">Tileco Land Developers</span>
-            <span class="card-meta">100 kW · VKI, Jaipur</span>
-          </div>
+        <!-- 200 kW — Vinayak Industries -->
+        <article class="gallery-card placeholder" data-project="vinayak-industries" data-kw="200">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Vinayak Industries</p>
+          <p class="card-meta">200 kW · On Grid</p>
         </article>
 
-        <!-- Radhika Industries -->
-        <article class="gallery-card project-card has-image" data-project="radhika-industries-40kw">
-          <img src="radhika-industries-40kw/photo-1.jpg" alt="Radhika Industries — 40 kW" />
-          <div class="card-info">
-            <span class="card-name">Radhika Industries</span>
-            <span class="card-meta">40 kW · Jaipur</span>
-          </div>
+        <!-- 200 kW — Hastakala -->
+        <article class="gallery-card placeholder" data-project="hastakala" data-kw="200">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Hastakala</p>
+          <p class="card-meta">200 kW · On Grid</p>
         </article>
 
-        <!-- Vidhyadhar Nagar -->
-        <article class="gallery-card project-card has-image" data-project="vidhyadhar-nagar-jaipur-10kw">
-          <img src="vidhyadhar-nagar-jaipur-10kw/photo-1.jpg" alt="Vidhyadhar Nagar Residence — 10 kW" />
-          <div class="card-info">
-            <span class="card-name">Vidhyadhar Nagar</span>
-            <span class="card-meta">10 kW · Jaipur</span>
-          </div>
+        <!-- 180 kW — Ashoka Marble -->
+        <article class="gallery-card project-card has-image" data-project="ashoka-marble-vki-180kw" data-kw="180">
+          <img src="images/ashoka-marble-vki-180kw/photo-1.jpg" alt="Ashoka Marble VKI — 180 kW" />
+          <div class="card-info"><span class="card-name">Ashoka Marble VKI</span><span class="card-meta">180 kW · VKI, Jaipur</span></div>
         </article>
+
+        <!-- 150 kW — Surface -->
+        <article class="gallery-card placeholder" data-project="surface" data-kw="150">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Surface</p>
+          <p class="card-meta">150 kW · On Grid</p>
+        </article>
+
+        <!-- 134 kW — Shakun Marble (from list, different entry) -->
+        <article class="gallery-card placeholder" data-project="shakun-marble-134" data-kw="134">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Shakun Marble</p>
+          <p class="card-meta">134 kW · On Grid</p>
+        </article>
+
+        <!-- 130 kW — Shreeyansh Healthcare -->
+        <article class="gallery-card tall project-card has-image" data-project="shreeyansh-healthcare-kishangarh-130kw" data-kw="130">
+          <img src="images/shreeyansh-healthcare-kishangarh-130kw/photo-1.jpg" alt="Shreeyansh Healthcare — 130 kW" />
+          <div class="card-info"><span class="card-name">Shreeyansh Healthcare</span><span class="card-meta">130 kW · Kishangarh</span></div>
+        </article>
+
+        <!-- 120 kW — Jajoo Exim -->
+        <article class="gallery-card placeholder" data-project="jajoo-exim" data-kw="120">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Jajoo Exim Pvt. Ltd.</p>
+          <p class="card-meta">120 kW · On Grid</p>
+        </article>
+
+        <!-- 108 kW — J B Cold Storage -->
+        <article class="gallery-card placeholder" data-project="jb-cold-storage" data-kw="108">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">J B Cold Storage</p>
+          <p class="card-meta">108 kW · On Grid</p>
+        </article>
+
+        <!-- 100 kW — Baid Fincom -->
+        <article class="gallery-card placeholder" data-project="baid-fincom" data-kw="100">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Baid Fincom Services</p>
+          <p class="card-meta">100 kW · On Grid</p>
+        </article>
+
+        <!-- 100 kW — Tileco Land Developers -->
+        <article class="gallery-card project-card has-image" data-project="tileco-land-developers-vki-100kw" data-kw="100">
+          <img src="images/tileco-land-developers-vki-100kw/photo-1.jpg" alt="Tileco Land Developers — 100 kW" />
+          <div class="card-info"><span class="card-name">Tileco Land Developers</span><span class="card-meta">100 kW · VKI, Jaipur</span></div>
+        </article>
+
+        <!-- 72 kW — Transcorp Tower -->
+        <article class="gallery-card placeholder" data-project="transcorp-tower" data-kw="72">
+          <div class="placeholder-icon">☀</div>
+          <p class="card-name">Transcorp Tower</p>
+          <p class="card-meta">72 kW · On Grid</p>
+        </article>
+
+        <!-- 40 kW — Radhika Industries -->
+        <article class="gallery-card project-card has-image" data-project="radhika-industries-40kw" data-kw="40">
+          <img src="images/radhika-industries-40kw/photo-1.jpg" alt="Radhika Industries — 40 kW" />
+          <div class="card-info"><span class="card-name">Radhika Industries</span><span class="card-meta">40 kW · Jaipur</span></div>
+        </article>
+
+        <!-- 10 kW — Vidhyadhar Nagar -->
+        <article class="gallery-card project-card has-image" data-project="vidhyadhar-nagar-jaipur-10kw" data-kw="10">
+          <img src="images/vidhyadhar-nagar-jaipur-10kw/photo-1.jpg" alt="Vidhyadhar Nagar — 10 kW" />
+          <div class="card-info"><span class="card-name">Vidhyadhar Nagar</span><span class="card-meta">10 kW · Jaipur</span></div>
+        </article>
+
       </section>
     </main>
 
@@ -141,7 +178,7 @@
       </div>
       <button class="lightbox-arrow next" type="button" aria-label="Next image">›</button>
     </div>
-    
-    <script src="./script.js?v=2"></script>
+
+    <script src="./script.js"></script>
   </body>
 </html>

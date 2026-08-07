@@ -197,6 +197,7 @@ button { font: inherit; }
   backface-visibility: hidden;
   will-change: auto;
   transition: filter 300ms ease;
+  border-radius: inherit;
 }
 
 .gallery-card:hover img {

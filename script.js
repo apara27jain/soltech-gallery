@@ -18,12 +18,12 @@ const allCards   = document.querySelectorAll(".gallery-card");
 
 function applyFilter(filter) {
   allCards.forEach((card) => {
-    const kw = Number(card.dataset.kw);
-    let show = false;
-    if (filter === "all")      show = true;
-    else if (filter === "300+")    show = kw >= 300;
-    else if (filter === "100-300") show = kw >= 100 && kw < 300;
-    else if (filter === "under100") show = kw < 100;
+    const category = card.dataset.category;
+
+    const show =
+      filter === "all" ||
+      category === filter;
+
     card.classList.toggle("hidden", !show);
   });
 }

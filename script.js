@@ -2,14 +2,14 @@
 const PROJECT_GALLERIES = {
   "sbe-international-stones-dudu-400kw": { name: "SBE International Stones", meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:9},(_,i)=>`sbe-international-stones-dudu-400kw/photo-${i+1}.jpg`) },
   "magnatix-rocks-dudu-400kw":           { name: "Magnatix Rocks",            meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:14},(_,i)=>`magnatix-rocks-dudu-400kw/photo-${i+1}.jpg`) },
-  "westin-pushkar-300kw":                { name: "The Westin Pushkar",         meta: "300 kW · Pushkar, Rajasthan", photos: Array.from({length:35},(_,i)=>`westin-pushkar-300kw/photo-${i+1}.jpg`) },
-  "vrindavan-dham-khatu-shyam-250kw":    { name: "Vrindavan Dham Dharamshala", meta: "250 kW · Khatu Shyam Ji, Rajasthan", photos: Array.from({length:20},(_,i)=>`vrindavan-dham-khatu-shyam-250kw/photo-${i+1}.jpg`) },
-  "shakun-marble-vki-234kw":             { name: "Shakun Marbles VKI",         meta: "234 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:1},(_,i)=>`shakun-marble-vki-234kw/photo-${i+1}.jpg`) },
-  "ashoka-marble-vki-180kw":             { name: "Ashoka Marble VKI",          meta: "180 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:6},(_,i)=>`ashoka-marble-vki-180kw/photo-${i+1}.jpg`) },
+  "westin-pushkar-300kw":                 { name: "The Westin Pushkar",         meta: "300 kW · Pushkar, Rajasthan", photos: Array.from({length:35},(_,i)=>`westin-pushkar-300kw/photo-${i+1}.jpg`) },
+  "vrindavan-dham-khatu-shyam-250kw":     { name: "Vrindavan Dham Dharamshala", meta: "250 kW · Khatu Shyam Ji, Rajasthan", photos: Array.from({length:20},(_,i)=>`vrindavan-dham-khatu-shyam-250kw/photo-${i+1}.jpg`) },
+  "shakun-marble-vki-234kw":              { name: "Shakun Marbles VKI",         meta: "234 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:1},(_,i)=>`shakun-marble-vki-234kw/photo-${i+1}.jpg`) },
+  "ashoka-marble-vki-180kw":              { name: "Ashoka Marble VKI",          meta: "180 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:6},(_,i)=>`ashoka-marble-vki-180kw/photo-${i+1}.jpg`) },
   "shreeyansh-healthcare-kishangarh-130kw": { name: "Shreeyansh Healthcare",   meta: "130 kW · Kishangarh, Rajasthan", photos: Array.from({length:12},(_,i)=>`shreeyansh-healthcare-kishangarh-130kw/photo-${i+1}.jpg`) },
-  "tileco-land-developers-vki-100kw":    { name: "Tileco Land Developers",     meta: "100 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:7},(_,i)=>`tileco-land-developers-vki-100kw/photo-${i+1}.jpg`) },
-  "radhika-industries-40kw":             { name: "Radhika Industries",          meta: "40 kW · Jaipur, Rajasthan", photos: Array.from({length:2},(_,i)=>`radhika-industries-40kw/photo-${i+1}.jpg`) },
-  "vidhyadhar-nagar-jaipur-10kw":        { name: "Vidhyadhar Nagar Residence", meta: "10 kW · Jaipur, Rajasthan", photos: Array.from({length:4},(_,i)=>`vidhyadhar-nagar-jaipur-10kw/photo-${i+1}.jpg`) },
+  "tileco-land-developers-vki-100kw":     { name: "Tileco Land Developers",     meta: "100 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:7},(_,i)=>`tileco-land-developers-vki-100kw/photo-${i+1}.jpg`) },
+  "radhika-industries-40kw":              { name: "Radhika Industries",          meta: "40 kW · Jaipur, Rajasthan", photos: Array.from({length:2},(_,i)=>`radhika-industries-40kw/photo-${i+1}.jpg`) },
+  "vidhyadhar-nagar-jaipur-10kw":         { name: "Vidhyadhar Nagar Residence", meta: "10 kW · Jaipur, Rajasthan", photos: Array.from({length:4},(_,i)=>`vidhyadhar-nagar-jaipur-10kw/photo-${i+1}.jpg`) },
   
   "site-1-pergola":                      { name: "Site 1 Pergola", meta: "Solar Pergola", photos: Array.from({length: 4}, (_, i) => `Site1/p${i+1}.jpg`) },
   "site-2-pergola":                      { name: "Site 2 Pergola", meta: "Solar Pergola", photos: Array.from({length: 8}, (_, i) => `Site2/p${i+1}.jpg`) },
@@ -20,31 +20,38 @@ const PROJECT_GALLERIES = {
   "site-7-pergola-wip":                  { name: "Site 7 Pergola (WIP)", meta: "Work in Progress", photos: Array.from({length: 6}, (_, i) => `Site7/p${i+1}.jpg`) },
   "site-8-industry":                     { name: "Site 8 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 6}, (_, i) => `Site8/p${i+1}.jpg`) },
   "site-9-pergola":                      { name: "Site 9 Pergola", meta: "Solar Pergola", photos: Array.from({length: 7}, (_, i) => `Site9/p${i+1}.jpg`) },
-
 };
 
-// ── KW FILTER ──────────────────────────────────────────────────────────
+// ── CATEGORY FILTERING ─────────────────────────────────────────────────
 const filterBtns = document.querySelectorAll(".filter-btn");
-const allCards   = document.querySelectorAll(".gallery-card");
 
 function applyFilter(filter) {
-  allCards.forEach((card) => {
-    const category = card.dataset.category;
+  const selectedFilter = (filter || "").trim().toLowerCase();
+  
+  document.querySelectorAll(".gallery-card").forEach((card) => {
+    const category = (card.dataset.category || "").trim().toLowerCase();
+    const show = selectedFilter === "all" || category === selectedFilter;
 
-    const show =
-      filter === "all" ||
-      category === filter;
-
-    card.classList.toggle("hidden", !show);
+    if (show) {
+      card.classList.remove("hidden");
+      card.style.display = ""; 
+    } else {
+      card.classList.add("hidden");
+      card.style.display = "none";
+    }
   });
 }
 
 filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  const handleFilterClick = (e) => {
+    e.preventDefault();
     filterBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     applyFilter(btn.dataset.filter);
-  });
+  };
+
+  btn.addEventListener("click", handleFilterClick);
+  btn.addEventListener("touchend", handleFilterClick);
 });
 
 // ── PARALLAX ───────────────────────────────────────────────────────────
@@ -134,12 +141,30 @@ function navigate(direction) {
   setTimeout(() => { updateLightbox(); lightboxImage.style.opacity = "1"; }, 120);
 }
 
-// Card clicks — photo cards open lightbox; placeholder cards do nothing
+// Card touch & click handling
+const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
 document.querySelectorAll(".project-card").forEach((card) => {
-  card.addEventListener("click", () => openLightbox(card.dataset.project, 0));
+  card.addEventListener("click", (e) => {
+    if (isTouchDevice) {
+      if (!card.classList.contains("info-open")) {
+        document.querySelectorAll(".project-card.info-open").forEach((c) => c.classList.remove("info-open"));
+        card.classList.add("info-open");
+        e.stopPropagation();
+        return;
+      }
+    }
+    openLightbox(card.dataset.project, 0);
+  });
 });
 
-// Lightbox controls — stopPropagation so clicks don't bubble to backdrop
+if (isTouchDevice) {
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".project-card.info-open").forEach((c) => c.classList.remove("info-open"));
+  });
+}
+
+// Lightbox controls
 closeButton.addEventListener("click", (e) => { e.stopPropagation(); closeLightbox(); });
 prevButton.addEventListener("click",  (e) => { e.stopPropagation(); navigate(-1); });
 nextButton.addEventListener("click",  (e) => { e.stopPropagation(); navigate(1); });
@@ -160,24 +185,3 @@ lightbox.addEventListener("touchend",   (e) => {
   const delta = touchStartX - e.changedTouches[0].clientX;
   if (Math.abs(delta) > 50) navigate(delta > 0 ? 1 : -1);
 });
-
-// Touch: two-stage tap (first tap = show info, second tap = open lightbox)
-if (window.matchMedia("(hover: none)").matches) {
-  document.querySelectorAll(".project-card").forEach((card) => {
-    card.replaceWith(card.cloneNode(true));
-  });
-  document.querySelectorAll(".project-card").forEach((card) => {
-    card.addEventListener("click", (e) => {
-      if (!card.classList.contains("info-open")) {
-        document.querySelectorAll(".project-card.info-open").forEach((c) => c.classList.remove("info-open"));
-        card.classList.add("info-open");
-        e.stopPropagation();
-      } else {
-        openLightbox(card.dataset.project, 0);
-      }
-    });
-  });
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".project-card.info-open").forEach((c) => c.classList.remove("info-open"));
-  });
-}

@@ -97,18 +97,6 @@ button { font: inherit; }
   backdrop-filter: blur(8px);
   box-sizing: border-box;
   text-decoration: none;
-  
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-/* Hover lift for the phone link (keeps gold style active) */
-.phone-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 22px rgba(253, 184, 19, 0.45);
-}
-
-.phone-btn:active {
-  transform: translateY(0);
 }
 
 /* Ambient glow animation applied to both */

@@ -71,66 +71,61 @@ button { font: inherit; }
   gap: 16px;
 }
 
-/* Hover & Active Effects matching filter buttons */
+/* ── IDENTICAL BADGE & PHONE BUTTON STYLES ── */
 .phone-btn,
 .stat-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px; /* Explicit height locks both buttons to the exact same size */
+  height: 44px; /* Locks exact identical height */
   padding: 0 24px;
   border-radius: 999px;
+  
+  /* Font Matching */
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  
+  /* Constant Gold Styling & Glow (matching image/badge) */
+  color: var(--solar);
+  background: rgba(15, 30, 50, 0.4);
+  border: 1px solid rgba(253, 184, 19, 0.75);
+  box-shadow: 0 0 14px rgba(253, 184, 19, 0.22);
   backdrop-filter: blur(8px);
   box-sizing: border-box;
-}
-
-/* ── PHONE BUTTON (Always visible outline + background) ── */
-.phone-btn {
   text-decoration: none;
-  color: var(--white);
-  background: rgba(15, 30, 50, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  cursor: pointer;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
-/* Subtle glow enhancement on hover */
-.phone-btn:hover,
-.phone-btn:focus-visible {
-  background: rgba(15, 35, 60, 0.75);
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+/* Hover lift for the phone link (keeps gold style active) */
+.phone-btn:hover {
   transform: translateY(-1px);
+  box-shadow: 0 0 22px rgba(253, 184, 19, 0.45);
 }
 
 .phone-btn:active {
   transform: translateY(0);
 }
 
-/* ── 2000+ BADGE ── */
-.stat-badge {
-  color: var(--solar);
-  background: rgba(15, 30, 50, 0.4);
-  border: 1px solid rgba(253, 184, 19, 0.75);
-  box-shadow: 0 0 14px rgba(253, 184, 19, 0.22);
+/* Ambient glow animation applied to both */
+.stat-badge,
+.phone-btn {
   animation: badge-glow 3s ease-in-out infinite alternate;
 }
 
-/* Ambient glow animation for the badge */
 @keyframes badge-glow {
   0% {
     box-shadow: 0 0 10px rgba(253, 184, 19, 0.18);
   }
   100% {
-    box-shadow: 0 0 20px rgba(253, 184, 19, 0.4);
+    box-shadow: 0 0 20px rgba(253, 184, 19, 0.45);
   }
 }
+
 /* ── FILTER BUTTONS ───────────────────────────────────────────────────── */
 .filter-bar {
   display: flex;

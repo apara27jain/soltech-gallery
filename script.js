@@ -19,6 +19,16 @@ const PROJECT_GALLERIES = {
   "jb-cold-storage":                     { name: "J B Cold Storage",    meta: "108 kW · Jaipur, Rajasthan",    photos: Array.from({length: 1}, (_, i) => `jb-cold-storage/photo-${i+1}.jpg`)  },
   "baid-fincom":                         { name: "Baid Fincom Services",    meta: "100 kW · Jaipur, Rajasthan",    photos: Array.from({length: 1}, (_, i) => `baid-fincom/photo-${i+1}.jpg`)  },
   "transcorp-tower":                     { name: "Transcorp Tower",    meta: "72 kW · Jaipur, Rajasthan",    photos: Array.from({length: 1}, (_, i) => `transcorp-tower/photo-${i+1}.jpg`)  },
+  "site-1-pergola":                      { name: "Site 1 Pergola", meta: "Solar Pergola", photos: Array.from({length: 4}, (_, i) => `Site 1/photo-${i+1}.jpg`) },
+  "site-2-pergola":                      { name: "Site 2 Pergola", meta: "Solar Pergola", photos: Array.from({length: 8}, (_, i) => `Site 2/photo-${i+1}.jpg`) },
+  "site-3-industry":                     { name: "Site 3 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 8}, (_, i) => `Site 3/photo-${i+1}.jpg`) },
+  "site-4-industry":                     { name: "Site 4 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 9}, (_, i) => `Site 4/photo-${i+1}.jpg`) },
+  "site-5-industry":                     { name: "Site 5 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 6}, (_, i) => `Site 5/photo-${i+1}.jpg`) },
+  "site-6-industry":                     { name: "Site 6 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 5}, (_, i) => `Site 6/photo-${i+1}.jpg`) },
+  "site-7-pergola-wip":                  { name: "Site 7 Pergola (WIP)", meta: "Work in Progress", photos: Array.from({length: 6}, (_, i) => `Site 7/photo-${i+1}.jpg`) },
+  "site-8-industry":                     { name: "Site 8 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 6}, (_, i) => `Site 8/photo-${i+1}.jpg`) },
+  "site-9-pergola":                      { name: "Site 9 Pergola", meta: "Solar Pergola", photos: Array.from({length: 7}, (_, i) => `Site 9/photo-${i+1}.jpg`) },
+
 };
 
 // ── KW FILTER ──────────────────────────────────────────────────────────

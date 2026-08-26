@@ -74,22 +74,23 @@ button { font: inherit; }
 /* Hover & Active Effects matching filter buttons */
 .phone-btn,
 .stat-badge {
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  padding: 10px 24px;
-  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 44px; /* Explicit height locks both buttons to the exact same size */
+  padding: 0 24px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
   white-space: nowrap;
   backdrop-filter: blur(8px);
   box-sizing: border-box;
 }
 
-/* ── PHONE BUTTON ── */
+/* ── PHONE BUTTON (Always visible outline + background) ── */
 .phone-btn {
   text-decoration: none;
   color: var(--white);
@@ -99,13 +100,12 @@ button { font: inherit; }
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover effect on Phone Button */
+/* Subtle glow enhancement on hover */
 .phone-btn:hover,
 .phone-btn:focus-visible {
-  background: rgba(15, 35, 60, 0.7);
-  border-color: var(--solar);
-  color: var(--white);
-  box-shadow: 0 0 18px rgba(253, 184, 19, 0.35);
+  background: rgba(15, 35, 60, 0.75);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
   transform: translateY(-1px);
 }
 

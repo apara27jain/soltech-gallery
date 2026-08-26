@@ -13,6 +13,7 @@ const PROJECT_GALLERIES = {
   
   "site-1-pergola":                      { name: "Site 1 Pergola", meta: "Solar Pergola", photos: Array.from({length: 4}, (_, i) => `Site1/p${i+1}.jpg`) },
   "site-2-pergola":                      { name: "Site 2 Pergola", meta: "Solar Pergola", photos: Array.from({length: 8}, (_, i) => `Site2/p${i+1}.jpg`) },
+  "site-2-residential":                  { name: "Site 2 Residential", meta: "Residential Solar", photos: Array.from({length: 5}, (_, i) => `Site2/p${i+9}.jpg`) },
   "site-3-industry":                     { name: "Site 3 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 8}, (_, i) => `Site3/p${i+1}.jpg`) },
   "site-4-industry":                     { name: "Site 4 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 9}, (_, i) => `Site4/p${i+1}.jpg`) },
   "site-5-industry":                     { name: "Site 5 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 6}, (_, i) => `Site5/p${i+1}.jpg`) },

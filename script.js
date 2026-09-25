@@ -1,7 +1,7 @@
 // ── PROJECT GALLERIES ──────────────────────────────────────────────────
 const PROJECT_GALLERIES = {
-  "sbe-international-stones-dudu-400kw": { name: "SBE International Stones", meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:9},(_,i)=>`sbe-international-stones-dudu-400kw/photo-${i+1}.jpg`) },
-  "magnatix-rocks-dudu-400kw":           { name: "Magnatix Rocks",            meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:14},(_,i)=>`magnatix-rocks-dudu-400kw/photo-${i+1}.jpg`) },
+  // "sbe-international-stones-dudu-400kw": { name: "SBE International Stones", meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:9},(_,i)=>`sbe-international-stones-dudu-400kw/photo-${i+1}.jpg`) },
+  // "magnatix-rocks-dudu-400kw":           { name: "Magnatix Rocks",            meta: "400 kW · Dudu, Rajasthan", photos: Array.from({length:14},(_,i)=>`magnatix-rocks-dudu-400kw/photo-${i+1}.jpg`) },
   "westin-pushkar-300kw":                 { name: "The Westin Pushkar",         meta: "300 kW · Pushkar, Rajasthan", photos: Array.from({length:8},(_,i)=>`westin-pushkar-300kw/photo-${i+1}.jpg`) },
   "vrindavan-dham-khatu-shyam-250kw":     { name: "Vrindavan Dham Dharamshala", meta: "250 kW · Khatu Shyam Ji, Rajasthan", photos: Array.from({length:20},(_,i)=>`vrindavan-dham-khatu-shyam-250kw/photo-${i+1}.jpg`) },
   "shakun-marble-vki-234kw":              { name: "Shakun Marbles VKI",         meta: "234 kW · VKI Industrial Area, Jaipur", photos: Array.from({length:6},(_,i)=>`shakun-marble-vki-234kw/photo-${i+1}.jpg`) },

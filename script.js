@@ -11,7 +11,7 @@ const PROJECT_GALLERIES = {
   "radhika-industries-40kw":              { name: "Radhika Industries",          meta: "40 kW · Jaipur, Rajasthan", photos: Array.from({length:3},(_,i)=>`radhika-industries-40kw/photo-${i+1}.jpg`) },
   "vidhyadhar-nagar-jaipur-10kw":         { name: "Vidhyadhar Nagar Residence", meta: "10 kW · Jaipur, Rajasthan", photos: Array.from({length:4},(_,i)=>`vidhyadhar-nagar-jaipur-10kw/photo-${i+1}.jpg`) },
   
-  "site-1-pergola":                      { name: "Site 1 Pergola", meta: "Solar Pergola", photos: Array.from({length: 6}, (_, i) => `Site1/p${i+1}.jpg`) },
+  "site-1-residential":                  { name: "Site 1 Residential", meta: "Residential Solar", photos: Array.from({length: 6}, (_, i) => `Site1/p${i+1}.jpg`) },
   "site-2-residential":                  { name: "Site 2 Residential", meta: "Residential Solar", photos: Array.from({length: 5}, (_, i) => `Site2/p${i+1}.jpg`) },
   "site-3-industry":                     { name: "Site 3 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 8}, (_, i) => `Site3/p${i+1}.jpg`) },
   "site-4-industry":                     { name: "Site 4 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 9}, (_, i) => `Site4/p${i+1}.jpg`) },
@@ -19,7 +19,7 @@ const PROJECT_GALLERIES = {
   "site-6-industry":                     { name: "Site 6 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 5}, (_, i) => `Site6/p${i+1}.jpg`) },
   "site-7-pergola-wip":                  { name: "Site 7 Pergola (WIP)", meta: "Work in Progress", photos: Array.from({length: 6}, (_, i) => `Site7/p${i+1}.jpg`) },
   "site-8-industry":                     { name: "Site 8 Industry", meta: "Commercial & Industrial", photos: Array.from({length: 6}, (_, i) => `Site8/p${i+1}.jpg`) },
-  "site-9-pergola":                      { name: "Site 9 Pergola", meta: "Solar Pergola", photos: Array.from({length: 7}, (_, i) => `Site9/p${i+1}.jpg`) },
+  "site-9-residential":                  { name: "Site 9 Residential", meta: "Residential Solar", photos: Array.from({length: 7}, (_, i) => `Site9/p${i+1}.jpg`) },
   "site-10-residential":                 { name: "Site 10 Pergola", meta: "Solar Pergola", photos: Array.from({length: 3}, (_, i) => `Site10/p${i+1}.jpg`) },
 };
 
